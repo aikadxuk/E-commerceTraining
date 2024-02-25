@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>E-commerce product page</title>
+  <script src="https://kit.fontawesome.com/8cd6261252.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+  <div class="overlayBackground activeOverlay">
+    <div class="overlayImgButtons">
+      <img src="/images/image-product-1.jpg" id="overlayImgOn">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+  <header>
+    <img src="images/logo.svg" id="logo">
+    <nav class="nav-1">
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <nav class="nav-2">
+      <div id="nav-img" class="checkoutButton">
+        <img src="images/icon-cart.svg">
+      </div>
+      <div class="nav-avatar">
+        <img src="images/image-avatar.png">
+      </div>
+      <div class="checkout-notification">
+        <span id="cart">Cart</span>
+        <div class="info-noti">
+          <div id="img-noti">
+            <img src="images/image-product-1-thumbnail.jpg">
+          </div>
+          <section>
+            <p>Fall Limited Edition Sneakers</p>
+            <div>
+              <span id="price">&dollar;<span class="price-value">125,00</span> X <span
+                  class="quantity-noti">3</span></span>
+              <b>&dollar;<span class="multiply-result">375,00</span></b>
+            </div>
+          </section>
+          <div class="delete-noti">
+            <img src="images/icon-delete.svg">
+          </div>
+        </div>
+        <button id="submit">Checkout</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="product-album">
+      <div class="container">
+        <div class="principal-img">
+          <img src="images/image-product-1.jpg" id="overlayImgOff" class="slidePrincipalImg">
+        </div>
+        <div class="container-slide">
+          <div class="slide">
+            <section class="card">
+              <img src="images/image-product-1-thumbnail.jpg" class="cardImg" id="img1">
+            </section>
+            <section class="card">
+              <img src="images/image-product-2-thumbnail.jpg" class="cardImg" id="img2">
+            </section>
+            <section class="card">
+              <img src="images/image-product-3-thumbnail.jpg" class="cardImg" id="img3">
+            </section>
+            <section class="card">
+              <img src="images/image-product-4-thumbnail.jpg" class="cardImg" id="img4">
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-info">
+      <span id="sneaker-span">Sneaker Company</span>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+        they'll withstand everything the weather can offer.</p>
+      <div class="product-price">
+        <b>&dollar;<span id="product-info-price">125,00</span></b>
+        <span id="discount-percent">50&percnt;</span>
+      </div>
+      <span id="original-price">&dollar;250.00</span>
+      <div class="productQuantity">
+        <div class="chooseQuantity">
+          <div id="minusButton" class="quantityButtons"><img src="images/icon-minus.svg"></div>
+          <span id="productQuantityNumber">0</span>
+          <div id="plusButton" class="quantityButtons"><img src="images/icon-plus.svg"></div>
+        </div>
+        <button id="addCart"><a href="#"><img src="images/icon-cart.svg">Add to cart</a></button>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
