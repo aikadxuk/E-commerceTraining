@@ -1,0 +1,36 @@
+[33mcommit 5eb1e0c1d225e73ba82b823c79b97cc5f018e6f8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 32a1492 e8fb40b
+Author: AlexanderHBC <aikadxuk@gmail.com>
+Date:   Sun Feb 25 15:46:20 2024 -0300
+
+    O estilo está pronto, adicionei algumas funcionalidades de galeria e notificação até agora
+
+[33mcommit 32a149293a5774f68effd954fb3259e40a0df8ed[m
+Author: AlexanderHBC <aikadxuk@gmail.com>
+Date:   Sun Feb 25 15:44:10 2024 -0300
+
+    O estilo está pronto, adicionei algumas funcionalidades de galeria e notificação até agora
+
+[33mcommit e8fb40b725462e870c0d4a68e95479391ea85fdd[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: aikadxuk <129562184+aikadxuk@users.noreply.github.com>
+Date:   Sun Feb 25 15:42:29 2024 -0300
+
+    Delete style-guide.md
+
+[33mcommit 138f9eee8629423c4efd7f3c069874dae37e860c[m
+Author: aikadxuk <129562184+aikadxuk@users.noreply.github.com>
+Date:   Sun Feb 25 15:42:07 2024 -0300
+
+    Delete README-template.md
+
+[33mcommit c1b302e987014794c2c163cdc627306727498d09[m
+Author: aikadxuk <129562184+aikadxuk@users.noreply.github.com>
+Date:   Sun Feb 25 15:41:48 2024 -0300
+
+    Delete README.md
+
+[33mcommit e5089af95163ad97646453b6a692af1f60dbd18f[m
+Author: AlexanderHBC <aikadxuk@gmail.com>
+Date:   Sat Feb 24 18:38:16 2024 -0300
+
+    Início do projeto de um eccomerce básico, vai ser minha primeira tentativa

@@ -128,12 +128,12 @@ header nav{
 
 /* Notificacao do checkout */
 
-/* .checkout-notification{
-    display: none;
-} */
-
 .checkout-notification{
-/* .checkout-notification.active{ */
+    display: none;
+}
+
+
+.checkout-notification.active{
     position: absolute;
     top: 70px;
     right: -90px;
@@ -190,6 +190,10 @@ header nav{
     color: var(--dark-grayish-blue);
 }
 
+.delete-noti{
+    cursor: pointer;
+}
+
 #submit{
     background-color: var(--orange-color);
     border: none;
@@ -198,6 +202,7 @@ header nav{
     color: white;
     font-weight: 600;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 main{
@@ -216,6 +221,7 @@ main{
 .principal-img{
     width: 100%;
     max-width: 420px;
+    cursor: pointer;
 }
 
 .principal-img img{

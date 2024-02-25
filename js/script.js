@@ -82,10 +82,89 @@ function calcQuantity(quantButton, index) {
     if (index === 0 && productQuantityConvert > 0) {
         productQuantityConvert--
         productQuantityNumber.textContent = `${productQuantityConvert}`
-    } else if (index === 1) {
+    } else if (index === 1 && productQuantityConvert < 30) {
         productQuantityConvert++
         productQuantityNumber.textContent = `${productQuantityConvert}`
     }
+
+    return productQuantityConvert
 }
 
-// console.log(productQuantityNumber)
+// Função de mandar a quantidade de itens pro carrinho
+
+const addCart = document.querySelector('#addCart')
+const productPrice = document.querySelector('#product-info-price')
+const priceValueNoti = document.querySelector('.price-value')
+const quantityNoti = document.querySelector('.quantity-noti')
+const multiplyResultNoti = document.querySelector('.multiply-result')
+const productName = document.querySelector('#productName')
+const productNotiName = document.querySelector('#productNotiName')
+const imgNoti = document.querySelector('#img-noti')
+const imgNotiContainer = document.querySelector('#img-noti-container')
+const xnoti = document.querySelector('#x-noti')
+
+addCart.addEventListener('click', addCartToNoti)
+
+function addCartToNoti() {
+    let productPriceToNoti = productPrice.textContent
+    let productNameToNoti = productName.textContent
+    const actualQuantity = calcQuantity()
+    addItemToCart(actualQuantity)
+    quantityNoti.textContent = `${actualQuantity}`
+    let addItemToCartConvert = addItemToCart(actualQuantity)
+    multiplyResultNoti.textContent = `$ ${addItemToCartConvert}`
+    priceValueNoti.textContent = `$ ${productPriceToNoti}`
+    productNotiName.textContent = `${productNameToNoti}`
+    xnoti.textContent = 'X'
+
+    return {
+        productNameToNoti,
+        productPriceToNoti,
+        addItemToCartConvert,
+        actualQuantity
+    }
+}
+
+function addItemToCart(actualQuantity) {
+    let productPriceConvert = parseInt(productPrice.textContent)
+    let calcMultiplyProduct = actualQuantity * productPriceConvert
+    return calcMultiplyProduct
+}
+
+// Função pra apagar o item do carrinho
+
+const deleteItemCart = document.querySelector('.delete-noti')
+deleteItemCart.addEventListener('click', deleteItem)
+
+function deleteItem() {
+    quantityNoti.textContent = ``
+    multiplyResultNoti.textContent = ``
+    priceValueNoti.textContent = ``
+    productNotiName.textContent = ``
+    xnoti.textContent = ''
+}
+
+// Função pra armazenar os dados dos produtos
+const checkout = document.querySelector('#submit')
+
+checkout.addEventListener('click', buyProduct)
+
+function buyProduct() {
+    const productNotiData = addCartToNoti()
+    event.preventDefault()
+
+    let productData = []
+
+    if (localStorage.hasOwnProperty('item')) {
+        productData = JSON.parse(localStorage.getItem('item'))
+    }
+
+    productData.push({
+        nomeProduct: productNotiData.productNameToNoti,
+        quantityProduct: productNotiData.actualQuantity,
+        originalPriceProduct: productNotiData.productPriceToNoti,
+        totalPriceProducts: productNotiData.addItemToCartConvert
+    })
+
+    localStorage.setItem('item', JSON.stringify(productData))
+}
