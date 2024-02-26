@@ -1,3 +1,21 @@
+// menu hamburguer no mobile
+
+const hamburguer = document.querySelector('#hamburguer')
+
+hamburguer.addEventListener('click', () => {
+    const navegacao = document.querySelector('.nav-1')
+
+    if (navegacao.classList.contains('activeMenu')) {
+        navegacao.style.left = `-53px`
+        hamburguer.classList.add('activeHamburguer')
+        navegacao.classList.remove('activeMenu')
+    } else {
+        navegacao.style.left = `-455px`
+        hamburguer.classList.remove('activeHamburguer')
+        navegacao.classList.add('activeMenu')
+    }
+})
+
 // Animação de abertura da notificação de checkout
 const checkoutButton = document.querySelector('.checkoutButton')
 const checkouNotification = document.querySelector('.checkout-notification')
